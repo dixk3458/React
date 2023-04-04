@@ -2,16 +2,17 @@ import './App.css';
 
 function App() {
   const name = '정재웅';
+  const list = ['우유', '딸기', '바나나'];
 
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <h1>{`Hello ${name}!`}</h1>
       <h2 style={{ background: 'blue' }}>{name}</h2>
 
       <ul>
-        <li>사과</li>
-        <li>수박</li>
-        <li>포도</li>
+        {list.map(item => (
+          <li>{item}</li>
+        ))}
       </ul>
     </div>
   );
