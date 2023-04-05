@@ -1,6 +1,7 @@
 import React from 'react';
 import Profile from './components/Profile';
 import './App.css';
+import Avatar from './components/Avatar';
 
 export default function AppProfile() {
   return (
@@ -20,6 +21,12 @@ export default function AppProfile() {
         name={'지수'}
         title={'블랙핑크'}
         isNew={false}
+      />
+      <Avatar
+        image={
+          'https://search.pstatic.net/common?type=b&size=144&expire=1&refresh=true&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2Fportrait%2F202209%2F20220913133442989.jpg'
+        }
+        isNew={true}
       />
     </div>
   );
