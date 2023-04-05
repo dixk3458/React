@@ -38,9 +38,10 @@
 }
 
 .profile {
-  width: 600px;
+  width: 300px;
   text-align: center;
   padding: 1rem;
+  margin-bottom: 1rem;
   background-color: #ebebeb;
   border-radius: 20px;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -49,7 +50,7 @@
 }
 
 .photo {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   border-radius: 100%;
 }
