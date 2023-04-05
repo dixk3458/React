@@ -11,6 +11,7 @@ export default function AppProfile() {
         }
         name={'정재웅'}
         title={'프론트엔드 개발자'}
+        isNew={true}
       />
       <Profile
         image={
@@ -18,6 +19,7 @@ export default function AppProfile() {
         }
         name={'지수'}
         title={'블랙핑크'}
+        isNew={false}
       />
     </div>
   );
