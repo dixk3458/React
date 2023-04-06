@@ -4,8 +4,21 @@ import './App.css';
 import Avatar from './components/Avatar';
 
 export default function AppProfile() {
+  const handleClick = event => {
+    console.log(event);
+    alert('event2 발생');
+  };
   return (
     <div>
+      <button
+        onClick={event => {
+          console.log(event);
+          alert('event1 발생');
+        }}
+      >
+        Button
+      </button>
+      <button onClick={handleClick}>Button2</button>
       <Profile
         image={
           'https://lh3.googleusercontent.com/71taw1bTsnXa4WJpxkn8TbyQD9L_Ha4_4WOYKGKiz80GF4GotWNBBTwVKmOKq_lWw6aiR24lo_QbXeVleIDG7SBr6Pdr9gwENQkBgKyUxg'
