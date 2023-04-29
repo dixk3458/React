@@ -9,7 +9,10 @@ export default function Counter() {
       <button
         className="button"
         onClick={() => {
-          setCount(count + 1);
+          setCount(prev => prev + 1);
+          setCount(prev => prev + 1);
+          //   setCount(count+1);
+          //   setCount(count+1);
         }}
       >
         Add +
