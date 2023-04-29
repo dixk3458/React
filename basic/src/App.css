@@ -73,3 +73,29 @@
   height: 200px;
   margin: auto;
 }
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 2px solid skyblue;
+}
+
+.counter:hover {
+  background-color: mintcream;
+}
+
+.number {
+  font-size: 7rem;
+}
+
+.button {
+  font-size: 7rem;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: mistyrose;
+}
