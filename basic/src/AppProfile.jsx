@@ -21,7 +21,7 @@ export default function AppProfile() {
       <button onClick={handleClick}>Button2</button>
       <Profile
         image={
-          'https://lh3.googleusercontent.com/71taw1bTsnXa4WJpxkn8TbyQD9L_Ha4_4WOYKGKiz80GF4GotWNBBTwVKmOKq_lWw6aiR24lo_QbXeVleIDG7SBr6Pdr9gwENQkBgKyUxg'
+          'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAzMzFfMjIx%2FMDAxNjgwMjUyODAyNjE0.7ZUPLVcI7UzBwvc4Pr_jeElVZdXO-ZCw54IPwLmJAWog.GAM_i9g9R5oJ6-stsq9jNYs5dgjDWWtdE2CqS7Psrg4g.JPEG.nailclassic%2F%25B4%25D9%25BF%25EE%25B7%25CE%25B5%25E5_%25285%2529.jpg&type=a340'
         }
         name={'정재웅'}
         title={'프론트엔드 개발자'}
