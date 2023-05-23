@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useReducer, useState } from 'react';
+import personReducer from '../reducer/person-reducer'
 
 export default function AppMentors() {
-  const [person, setPerson] = useState(initialPerson);
+  // const [person, setPerson] = useState(initialPerson);
+
+  const [person, dispatch] = useReducer(personReducer, initialPerson);
 
   const handleUpdate = () => {
     // 1. 클릭이 되었을때 프롬프트를 통해 prev,current에 저장한다.
@@ -15,27 +18,32 @@ export default function AppMentors() {
     // 객체 내부를 변경하고 싶다면, 참조값을 변경해줘야 React는 변화를 인지한다.
 
     // 즉 setPerson()을 호출해 person의 값을 바꿀건데, 이전에 사용한 person을 인자로 받아 새로운객체를 만들어 참조값이 바뀐다.
-    setPerson(person => ({
-      ...person,
-      mentors: person.mentors.map(mentor => {
-        if (mentor.name === prev) {
-          return { ...mentor, name: current };
-        }
-        return mentor;
-      }),
-    }));
+
+    // setPerson(person => ({
+    //   ...person,
+    //   mentors: person.mentors.map(mentor => {
+    //     if (mentor.name === prev) {
+    //       return { ...mentor, name: current };
+    //     }
+    //     return mentor;
+    //   }),
+    // }));
+
+    dispatch({ type: 'updated', prev, current });
   };
 
   const handleAdd = () => {
     const name = prompt('새로운 멘토의 이름은 무엇인가요?');
     const title = prompt('새로운 멘토의 직업은 무엇인가요?');
 
-    if( name == null || title == null ) return;
-    
-    setPerson(person => ({
-      ...person,
-      mentors: [...person.mentors, { name: name, title: title }],
-    }));
+    if (name == null || title == null) return;
+
+    // setPerson(person => ({
+    //   ...person,
+    //   mentors: [...person.mentors, { name: name, title: title }],
+    // }));
+
+    dispatch({ type: 'added', name, title });
   };
 
   const handleDelete = () => {
@@ -43,12 +51,14 @@ export default function AppMentors() {
     // 2. 있으면 해당 이름을 안가진 배열로 filter를 해준다.
     const name = prompt('누구를 삭제하고 싶은가요?');
 
-    setPerson(person => ({
-      ...person,
-      mentors: person.mentors.filter(mentor => {
-        return mentor.name !== name;
-      }),
-    }));
+    // setPerson(person => ({
+    //   ...person,
+    //   mentors: person.mentors.filter(mentor => {
+    //     return mentor.name !== name;
+    //   }),
+    // }));
+
+    dispatch({ type: 'deleted', name });
   };
 
   return (
