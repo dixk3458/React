@@ -29,6 +29,7 @@ export default function AppMentors() {
     //   }),
     // }));
 
+    // dispatch가 호출되면 기존의 person객체에서  인자로 전달한 action객체를 이용해 새로운 return값 즉  state가 변경된 새로운 person을 반환해준다.
     dispatch({ type: 'updated', prev, current });
   };
 

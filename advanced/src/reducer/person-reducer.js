@@ -1,6 +1,7 @@
 export default function personReducer(person, action) {
   switch (action.type) {
     case 'updated': {
+      // action 객체로부터 update 이전의 값 
       const { prev, current } = action;
       // const prev = action.prev;
       // const current = action.current;
